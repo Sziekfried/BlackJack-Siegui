@@ -1,0 +1,501 @@
+
+
+body{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   overflow: hidden;
+   font-family: 'Poppins',sans-serif;
+}
+.mesa{
+   height: 100vh;
+   background-image: url('./assets/img/backgrounds/fondo-7.jpg');
+   background-size: cover;
+   background-position: center;
+   margin: 0;
+   padding: 0;
+   overflow: hidden;
+   display: flex;
+   flex-direction: column;
+   position: relative;
+}
+.mesa::before{
+   position: absolute;
+   content: "";
+   top: 0;
+   left: 0;
+   bottom: 0;
+   right: 0;
+   background-color: #000000aa;
+}
+.headerPrinc{
+   align-self: center;
+   text-align: center;
+   justify-content: center;
+   width: 220px;
+   padding: 5px;
+   font-size: 35px;
+   display: flex;
+   flex-direction: row;
+   position: relative;
+   border: 2px solid transparent;
+   border-radius: 10px;
+   transition: all 0.3s ease-in-out;
+   -webkit-transition: all 0.3s ease-in-out;
+   -moz-transition: all 0.3s ease-in-out;
+   -ms-transition: all 0.3s ease-in-out;
+   -o-transition: all 0.3s ease-in-out;
+   -webkit-border-radius: 10px;
+   -moz-border-radius: 10px;
+   -ms-border-radius: 10px;
+   -o-border-radius: 10px;
+}
+.headerPrinc::after{
+   content: "";
+   width: 30px;
+   height: 30px;
+   border-top: 2px solid #ddffdd;
+   border-left: 2px solid #ddffdd;
+   position: absolute;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   top: 0;
+   transition: all 0.3s ease-in;
+   -webkit-transition: all 0.3s ease-in;
+   -moz-transition: all 0.3s ease-in;
+   -ms-transition: all 0.3s ease-in;
+   -o-transition: all 0.3s ease-in;
+}
+.headerPrinc>span{
+   transition: all 0.3s ease-in;
+   -webkit-transition: all 0.3s ease-in;
+   -moz-transition: all 0.3s ease-in;
+   -ms-transition: all 0.3s ease-in;
+   -o-transition: all 0.3s ease-in;
+}
+.headerPrinc>.black{
+   color: #000;
+   text-shadow: 2px 2px #ddffdd;
+}
+.headerPrinc>.jack{
+   color: #ddffdd;
+   text-shadow: 2px 2px #000;
+}
+.headerPrinc::before{
+   content: "";
+   width: 30px;
+   height: 30px;
+   border-bottom: 2px solid #ddffdd;
+   border-right: 2px solid #ddffdd;
+   position: absolute;
+   left: -1;
+   right: 0;
+   bottom: 0;
+   top: -1;
+   transition: all 0.3s ease-in;
+   -webkit-transition: all 0.3s ease-in;
+   -moz-transition: all 0.3s ease-in;
+   -ms-transition: all 0.3s ease-in;
+   -o-transition: all 0.3s ease-in;
+}
+.headerPrinc:hover::after,.headerPrinc:hover::before{
+   width: 240px;
+   height: 75px;
+}
+.headerPrinc:hover >.jack{
+   color: #000;
+   text-shadow: 2px 2px#ddffdd;
+}
+.headerPrinc:hover >.black{
+   color: #ddffdd;
+   text-shadow: 2px 2px #220220;
+}
+
+.medio {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 250px repeat(auto-fill, 100px) 250px;
+  max-width: 85vw;
+  position: relative;
+  top: -45px;
+  align-self: center;
+}
+.apuesta {
+   color: #fff;
+   grid-column: 1;
+   grid-row: 1/4;
+   overflow: hidden;
+   width: auto;
+   margin: 0 auto;
+   display: flex;
+   justify-items: center;
+   border-radius: 40px;
+   background-image: url('./assets/img/backgrounds/fondo-7.jpg');
+   background-size: cover;
+   background-position: center;
+   -webkit-border-radius: 40px;
+   -moz-border-radius: 40px;
+   -ms-border-radius: 40px;
+   -o-border-radius: 40px;
+
+}
+.contenedor-apuesta{
+   z-index: 2;
+   position: relative;
+   margin: 0 auto;
+   display: grid;
+   grid-template-columns: 1fr;
+   grid-template-rows: repeat(5, 1fr);
+}
+.saldoActual, .apuestaMinima{
+   max-width: 15vw;
+   text-align: center;
+   display: inline-block;
+   padding: 5px;
+   height: min-content;
+   font-size: 20px;
+}
+.fichas {
+   align-self: center;
+   justify-self: center;
+   padding: 5px;
+   grid-column: 0/1;
+   grid-row: 2/4;
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   justify-items: flex-end;
+   height: auto;
+   width: 150px;
+   max-width: 20vw;
+}
+.fichas >img{
+   display: block;
+   width: 65px;
+   margin: 5px;
+   border-radius: 30px;
+   -webkit-border-radius: 30px;
+   -moz-border-radius: 30px;
+   -ms-border-radius: 30px;
+   -o-border-radius: 30px;
+}
+.saldoActual{
+   grid-column: 1;
+   grid-row: 4/5;
+   align-self: flex-end;
+}
+.apuestaMinima{
+   grid-column: 1;
+   grid-row: 1/2;
+   align-self: flex-end;
+}
+.botonesPrincipales{
+   align-self: center;
+   justify-self: center;
+   grid-column: 1;
+   grid-row: 5/6;
+   height: auto;
+   display: flex;
+   flex-wrap: wrap;
+}
+
+.botonesPrincipales{
+   width: auto;
+   align-self: center;
+   justify-self: center;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   
+}
+.botonPrincipal{
+   margin: 5px 0;
+   width: 150px;
+   color: #fff;
+   border: none;
+   height: 30px;
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   text-transform: uppercase;
+}
+.btnInicioJuego{
+   background-color: #91ff00b2;
+   border: none;
+   border-radius: 5px;
+   -webkit-border-radius: 5px;
+   -moz-border-radius: 5px;
+   -ms-border-radius: 5px;
+   -o-border-radius: 5px;
+}
+.btnInicioJuego:enabled:hover{
+   border: 1px solid rgb(13, 112, 0);
+   background-color: #61ff41;
+   color: #000;
+   font-weight: 700;
+}
+
+.btnInicioJuego > .icono-play{
+   color: #fff;
+   font-size: 20px;
+   overflow: hidden;
+   display: flex;
+   align-items: center;
+   position: absolute;
+   z-index: 2;
+   left: -30px;
+   opacity: 0;
+   transition: 0.3s ease-in-out all;
+   -webkit-transition: 0.3s ease-in-out all;
+   -moz-transition: 0.3s ease-in-out all;
+   -ms-transition: 0.3s ease-in-out all;
+   -o-transition: 0.3s ease-in-out all;
+}
+
+.btnInicioJuego:hover > .icono-play{
+   color: #232323;
+   left: 70%;
+   opacity: 1;
+}
+.btnInicioJuego>span{
+   transition: 0.4s ease-in-out all;
+   position: absolute;
+   left: 32%;
+   -webkit-transition: 0.4s ease-in-out all;
+   -moz-transition: 0.4s ease-in-out all;
+   -ms-transition: 0.4s ease-in-out all;
+   -o-transition: 0.4s ease-in-out all;
+}
+.btnInicioJuego:hover>span{
+   left: 22%;
+}
+
+
+.btnReiniciar{
+   background-color: #232323;
+}
+.btnReiniciar:hover{
+   background-color: #720400;
+}
+
+
+.botones {
+   grid-column: 2;
+   grid-row: 2;
+   display: flex;
+   align-items: center;
+   width: 300px;
+   height: 100px;
+   justify-content: center;
+}
+.grupoBotonesUno{
+   z-index: 2;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-grow: auto;
+}
+
+.botonShido{
+   overflow: hidden;
+   color: #ddf;
+   width: 50px;
+   height: 30px;
+   border: none;
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   font-size: 17px;
+   font-family: 'Poppins',sans-serif;
+   cursor: pointer;
+   text-transform: uppercase;
+   transition: 0.4s ease-in-out all;
+   margin: 5px;
+   border-radius: 10px;
+   -webkit-transition: 0.4s ease-in-out all;
+   -moz-transition: 0.4s ease-in-out all;
+   -ms-transition: 0.4s ease-in-out all;
+   -o-transition: 0.4s ease-in-out all;
+   -webkit-border-radius: 10px;
+   -moz-border-radius: 10px;
+   -ms-border-radius: 10px;
+   -o-border-radius: 10px;
+}
+.botonShido:enabled:hover{
+   width: 180px;
+}
+.botonShido >span{
+   opacity: 0;
+   position: relative;
+   top: 50px;
+   transition: 0.4s all ease-in-out;
+   -webkit-transition: 0.4s all ease-in-out;
+   -moz-transition: 0.4s all ease-in-out;
+   -ms-transition: 0.4s all ease-in-out;
+   -o-transition: 0.4s all ease-in-out;
+}
+.iconoBtns {
+   display: block;
+   padding: 5px;
+   align-self: center;
+   justify-self: center;
+   position: absolute;
+   z-index: 2;
+}
+.botonShido:enabled:hover >span{
+   top: 0%;
+   opacity: 1;
+}
+.botonShido:hover >.iconoBtns{
+   top: -50px;
+   opacity: 0;
+}
+
+.pedirCarta{
+   background-color: #22cc9a;
+}
+.plantarse{
+   background-color: #0dcfff;
+}
+.doblarApuesta{
+   background-color: #fa9a05;
+}
+.haciendo-apuesta, .fichasApostadas {
+   grid-column: 3;
+   grid-row: 2;
+   display: flex;
+   align-items: center;
+}
+.haciendo-apuesta{
+   display: flex;
+   align-items: center;
+   position: relative;
+}
+.haciendo-apuesta > span{
+   z-index: 2;
+   padding: 5px;
+   position: absolute;
+   left: 12%;
+   height: auto;
+   width: 60px;
+   display: block;
+   font-size: 20px;
+   font-weight: 650;
+   text-shadow:2px 2px #000 ;
+   color: #ffffff;
+   text-align: center;
+   border: 2px solid #b3b600;
+   background-color: #00000073;
+   border-radius: 30px;
+   -webkit-border-radius: 30px;
+   -moz-border-radius: 30px;
+   -ms-border-radius: 30px;
+   -o-border-radius: 30px;
+}
+.fichasApostadas >img{
+   position: relative;
+   width: 70px;
+   left: 70px;
+   margin-left: -55px;
+}
+.dealerEspacio {
+   height: auto;
+   grid-column: 2/5;
+   grid-row: 1;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.playerEspacio{
+   height: auto;
+   grid-column: 2/5;
+   grid-row: 3;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+}
+
+.manoPlayer>img, .manoDealer>img{
+   position: relative;
+   align-self: auto;
+   width: 125px;
+   left: 40px;
+   margin-left: -80px;
+}
+.playerEspacio > span, .dealerEspacio>span{
+   position: absolute;
+   align-self: flex-start;
+   text-align: center;
+   font-weight: 600;
+   margin-top: 15px;
+   z-index: 2;
+   padding: 10px;
+   background-color: #7fffd4a0;
+   border: 1px solid aquamarine;
+   border-radius: 5px;
+   -webkit-border-radius: 5px;
+   -moz-border-radius: 5px;
+   -ms-border-radius: 5px;
+   -o-border-radius: 5px;
+}
+.lugar-mazo {
+   grid-column: 5;
+   grid-row: 1/4;
+   padding: 15px;
+   display: flex;
+   align-items: center;
+   overflow: hidden;
+   min-width: 100px;
+}
+.mazo >img {
+   z-index: 0;
+   position: relative;
+   left:-100px;
+   height: 200px;
+   margin: 0;
+   overflow: hidden;
+   transform: rotateZ(-90deg);
+   -webkit-transform: rotateZ(-90deg);
+   -moz-transform: rotateZ(-90deg);
+   -ms-transform: rotateZ(-90deg);
+   -o-transform: rotateZ(-90deg);
+}
+.contadorIco > i{
+   position: relative;
+   text-shadow: 3px 3px #000000;
+}
+.contadorIco{
+   color: #000000;
+   z-index: 5;
+   font-size: 48px;
+   display: flex;
+   text-shadow: 3px 3px #03042b;
+}
+
+.contadorCartasMazo{
+   position: relative;
+   left: -48px;
+   z-index: 6;
+   display: block;
+   padding: 5px 0;
+   color: #ffffff;
+   font-size: 25px;
+   text-align: center;
+   text-shadow: 2px 2px rgb(1, 1, 2);
+}
+
+.cartaMazo {
+   z-index: 1;
+   justify-self: flex-end;
+}
+.cartaNueva {
+   margin-left: 15px;
+   justify-self: flex-end;
+   transition: all 0.5 ease-in;
+   -webkit-transition: all 0.5 ease-in;
+   -moz-transition: all 0.5 ease-in;
+   -ms-transition: all 0.5 ease-in;
+   -o-transition: all 0.5 ease-in;
+}
